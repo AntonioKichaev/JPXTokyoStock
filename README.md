@@ -54,7 +54,6 @@ Project Organization
 
 --------
 
-<p><small>Project based on the <a target="_blank" href="https://drivendata.github.io/cookiecutter-data-science/">cookiecutter data science project template</a>. #cookiecutterdatascience</small></p>
 
 
 ## Как скачать датасет с кагла
@@ -63,3 +62,12 @@ Project Organization
 - после чего получим в папке `data/raw/` кучу файлов
 
 ## snakemake дальше
+- из корневой папки делаем snakemake и получаем весь пайплайн.
+- snakemake --cores=all
+
+
+## workflow Snakemake
+[config.yaml](workflow/config.yaml)
+что есть сейчас через snakemake 
+1. заполним config file своими переменными и запустим snakemake --cores=all 
+2. на выходе получим скаченный датасет из кагла

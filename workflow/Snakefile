@@ -1,0 +1,23 @@
+configfile: "workflow/config.yaml"
+
+rule all:
+    input:
+        f"/Users/{config['local_env']['user']}/.kaggle/kaggle.json",
+        'data/raw/jpx-tokyo-stock-exchange-prediction.zip',
+        'data/raw/stock_list.csv'
+
+rule download_dataset_kaggle:
+    input:
+        f"/Users/{config['local_env']['user']}/.kaggle/kaggle.json"
+    output:
+        'data/raw/jpx-tokyo-stock-exchange-prediction.zip'
+    shell:
+        f"python -m src.data.make_original_dataset_from_kaggle {config['kaggle']['competion']} {config['kaggle']['save_path']}"
+
+
+
+rule set_user_kaggle_config:
+    output:
+        f"/Users/{config['local_env']['user']}/.kaggle/kaggle.json"
+    shell:
+        f"python -m src.settings.kaggle {config['kaggle']['user']} {config['kaggle']['key']} {config['kaggle']['json_path']}"

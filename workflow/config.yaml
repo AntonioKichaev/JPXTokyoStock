@@ -1,0 +1,9 @@
+local_env:
+  user: "antonkichaev"
+
+kaggle:
+  user: "" # write you
+  key: "" # write you
+  json_path: "/Users/antonkichaev/.kaggle/kaggle.json" # write you
+  competion: 'jpx-tokyo-stock-exchange-prediction' # write you
+  save_path: 'data/raw'
