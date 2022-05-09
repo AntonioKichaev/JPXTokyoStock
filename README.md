@@ -55,3 +55,11 @@ Project Organization
 --------
 
 <p><small>Project based on the <a target="_blank" href="https://drivendata.github.io/cookiecutter-data-science/">cookiecutter data science project template</a>. #cookiecutterdatascience</small></p>
+
+
+## Как скачать датасет с кагла
+- исполнить скрипт из папки [kaggle.py](src/settings/kaggle.py) он создаст файлик /users/youname/.kaggle/kaggle.json
+- скачиваем файлы, запускаем из папки [make_original_dataset_from_kaggle](src/data/make_original_dataset_from_kaggle.py)
+- после чего получим в папке `data/raw/` кучу файлов
+
+## snakemake дальше
